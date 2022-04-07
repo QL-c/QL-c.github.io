@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>03_对象高级 | 前端研究</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="description" content="JS,Vue,React,算法">
+    
+    <link rel="preload" href="/assets/css/0.styles.39ff8112.css" as="style"><link rel="preload" href="/assets/js/app.da88e55d.js" as="script"><link rel="preload" href="/assets/js/2.33dd5e52.js" as="script"><link rel="preload" href="/assets/js/9.75c577f9.js" as="script"><link rel="prefetch" href="/assets/js/10.c796a9e6.js"><link rel="prefetch" href="/assets/js/11.4e1dc297.js"><link rel="prefetch" href="/assets/js/12.0a152f51.js"><link rel="prefetch" href="/assets/js/13.49e7f6dd.js"><link rel="prefetch" href="/assets/js/14.84c1f97c.js"><link rel="prefetch" href="/assets/js/15.6ff3c422.js"><link rel="prefetch" href="/assets/js/16.50a67dc2.js"><link rel="prefetch" href="/assets/js/17.edc1baaa.js"><link rel="prefetch" href="/assets/js/18.019e5aef.js"><link rel="prefetch" href="/assets/js/3.1f1a7526.js"><link rel="prefetch" href="/assets/js/4.9b1eb444.js"><link rel="prefetch" href="/assets/js/5.ff9fc86c.js"><link rel="prefetch" href="/assets/js/6.c3dc27bb.js"><link rel="prefetch" href="/assets/js/7.3641f9f4.js"><link rel="prefetch" href="/assets/js/8.55bd915f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.39ff8112.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/头像.jpg" alt="前端研究" class="logo"> <span class="site-name can-hide">前端研究</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://gitee.com/QLeee" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="便捷文档" class="dropdown-title"><span class="title">便捷文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="便捷文档" class="mobile-dropdown-title"><span class="title">便捷文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/lyyrhf/article/details/115338763" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://jquery.cuishifeng.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  BootCDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://gitee.com/QLeee" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="便捷文档" class="dropdown-title"><span class="title">便捷文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="便捷文档" class="mobile-dropdown-title"><span class="title">便捷文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/lyyrhf/article/details/115338763" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://jquery.cuishifeng.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://www.bootcdn.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  BootCDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JS高级</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JS高级/01_基础总结深入.html" class="sidebar-link">01_基础总结深入</a></li><li><a href="/JS高级/02_函数高级.html" class="sidebar-link">02_函数高级</a></li><li><a href="/JS高级/03_对象高级.html" class="active sidebar-link">03_对象高级</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/JS高级/03_对象高级.html#对象的创建模式" class="sidebar-link">对象的创建模式</a></li><li class="sidebar-sub-header"><a href="/JS高级/03_对象高级.html#继承模式" class="sidebar-link">继承模式</a></li></ul></li><li><a href="/JS高级/04_线程机制与事件机制.html" class="sidebar-link">04_线程机制与事件机制</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>jQuery</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Promise</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>算法</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_03-对象高级"><a href="#_03-对象高级" class="header-anchor">#</a> 03_对象高级</h1> <h2 id="对象的创建模式"><a href="#对象的创建模式" class="header-anchor">#</a> 对象的创建模式</h2> <ul><li>Object构造函数模式<div class="language- extra-class"><pre class="language-text"><code>var obj = {};
+obj.name = 'Tom'
+obj.setName = function(name){this.name=name}
+</code></pre></div></li> <li>对象字面量模式<div class="language- extra-class"><pre class="language-text"><code>var obj = {
+  name : 'Tom',
+  setName : function(name){this.name = name}
+}
+</code></pre></div></li> <li>构造函数模式<div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.setName = function(name){this.name=name;};
+}
+new Person('tom', 12);
+</code></pre></div></li> <li>构造函数+原型的组合模式<div class="language- extra-class"><pre class="language-text"><code>function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+Person.prototype.setName = function(name){this.name=name;};
+new Person('tom', 12);
+</code></pre></div></li></ul> <h2 id="继承模式"><a href="#继承模式" class="header-anchor">#</a> 继承模式</h2> <ul><li><p>原型链继承 : 得到方法</p> <div class="language- extra-class"><pre class="language-text"><code>function Parent(){}
+Parent.prototype.test = function(){};
+function Child(){}
+Child.prototype = new Parent(); // 子类型的原型指向父类型实例
+Child.prototype.constructor = Child// 让子类型的原型的constructor指向子类型
+var child = new Child(); //有test()
+</code></pre></div></li> <li><p>借用构造函数 : 得到属性</p></li> <li><p>在子类型构造函数中通过call()调用父类型构造函数</p> <div class="language- extra-class"><pre class="language-text"><code>function Parent(xxx){this.xxx = xxx}
+Parent.prototype.test = function(){};
+function Child(xxx,yyy){
+    Parent.call(this, xxx);//借用构造函数   this.Parent(xxx)
+}
+var child = new Child('a', 'b');  //child.xxx为'a', 但child没有test()
+</code></pre></div></li> <li><p>组合</p> <div class="language- extra-class"><pre class="language-text"><code>function Parent(xxx){this.xxx = xxx}
+Parent.prototype.test = function(){};
+function Child(xxx,yyy){
+    Parent.call(this, xxx);//借用构造函数   this.Parent(xxx)
+}
+Child.prototype = new Parent(); //得到test()
+var child = new Child(); //child.xxx为'a', 也有test()
+</code></pre></div></li> <li><p>new一个对象背后做了些什么?</p> <ul><li>创建一个空对象</li> <li>给对象设置__proto__, 值为构造函数对象的prototype属性值   this.<strong>proto</strong> = Fn.prototype</li> <li>执行构造函数体(给对象添加属性/方法)</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JS高级/02_函数高级.html" class="prev">
+        02_函数高级
+      </a></span> <span class="next"><a href="/JS高级/04_线程机制与事件机制.html">
+        04_线程机制与事件机制
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:190px;bottom:300px;display:none;" data-v-5775ee02>
+      欢迎来到前端研究
+    </div> <div class="operation" style="right:190px;bottom:180px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:none;" data-v-5775ee02></i></div> <canvas id="banniang" width="215" height="300" class="live2d" style="position:fixed;right:0px;bottom:0px;opacity:0.9;z-index:99999;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/assets/js/app.da88e55d.js" defer></script><script src="/assets/js/2.33dd5e52.js" defer></script><script src="/assets/js/9.75c577f9.js" defer></script>
+  </body>
+</html>
